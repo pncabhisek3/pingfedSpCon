@@ -1,0 +1,96 @@
+{
+  "type": "SP",
+  "id": "",
+  "name": "",
+  "entityId": "",
+  "active": false,
+  "contactInfo": {
+    "firstName": "",
+    "lastName": "",
+    "email": ""
+  },
+  "baseUrl": "",
+  "loggingMode": "STANDARD",
+  "virtualEntityIds": [],
+  "credentials": {
+    "certs": [],
+    "signingSettings": {
+      "signingKeyPairRef": {
+      },
+      "includeCertInSignature": false,
+      "includeRawKeyInSignature": false,
+      "algorithm": "SHA256withRSA"
+    }
+  },
+  "spBrowserSso": {
+    "protocol": "SAML20",
+    "enabledProfiles": [
+      "IDP_INITIATED_SSO",
+      "SP_INITIATED_SSO"
+    ],
+    "incomingBindings": [
+      "POST",
+      "REDIRECT"
+    ],
+    "ssoServiceEndpoints": [
+      {
+        "binding": "POST",
+        "url": "",
+        "isDefault": true,
+        "index": 0
+      }
+    ],
+    "signAssertions": false,
+    "signResponseAsRequired": true,
+    "spSamlIdentityMapping": "STANDARD",
+    "requireSignedAuthnRequests": false,
+    "assertionLifetime": {
+      "minutesBefore": 5,
+      "minutesAfter": 5
+    },
+    "encryptionPolicy": {
+      "encryptAssertion": false,
+      "encryptSloSubjectNameId": false,
+      "sloSubjectNameIDEncrypted": false,
+      "encryptedAttributes": []
+    },
+    "attributeContract": {
+      "coreAttributes": [
+        {
+        }
+      ],
+      "extendedAttributes": [
+      ]
+    },
+    "adapterMappings": [],
+    "authenticationPolicyContractAssertionMappings": [
+      {
+        "attributeSources": [
+          {
+            "type": "LDAP",
+            "dataStoreRef": {
+            },
+            "description": "DSX",
+            "attributeContractFulfillment": {
+            },
+            "baseDn": "ou=ccoentities,o=cco.cisco.com",
+            "searchScope": "SUBTREE",
+            "searchFilter": "uid=${subject}",
+            "binaryAttributeSettings": {},
+            "memberOfNestedGroup": false
+          }
+        ],
+        "attributeContractFulfillment": {},
+        "issuanceCriteria": {
+          "conditionalCriteria": []
+        },
+        "authenticationPolicyContractRef": {
+        },
+        "restrictVirtualEntityIds": false,
+        "restrictedVirtualEntityIds": [],
+        "abortSsoTransactionAsFailSafe": true
+      }
+    ]
+  },
+  "applicationName": ""
+}

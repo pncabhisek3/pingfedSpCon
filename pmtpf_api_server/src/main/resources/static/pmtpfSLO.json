@@ -1,0 +1,115 @@
+{
+      "type": "SP",
+      "id": "",
+      "name": "",
+      "entityId": "",
+      "active": true,
+      "contactInfo": {
+        "firstName": "",
+        "lastName": "",
+        "email": ""
+      },
+      "baseUrl": "",
+      "loggingMode": "STANDARD",
+      "virtualEntityIds": [],
+      "licenseConnectionGroup": "",
+      "credentials": {
+        "certs": [
+          {
+            "primaryVerificationCert": true,
+            "secondaryVerificationCert": false,
+            "x509File": {
+              "fileData": ""
+            },
+            "encryptionCert": false
+          }
+        ],
+        "signingSettings": {
+          "signingKeyPairRef": {
+            "id": "ki22u6937pi76ilnzs8cbt3rp"
+          },
+          "includeCertInSignature": false,
+          "includeRawKeyInSignature": false,
+          "algorithm": "SHA256withRSA"
+        }
+      },
+      "spBrowserSso": {
+        "protocol": "SAML20",
+        "enabledProfiles": [
+          "SP_INITIATED_SLO",
+          "SP_INITIATED_SSO",
+          "IDP_INITIATED_SSO"
+        ],
+        "incomingBindings": [
+          "POST",
+          "REDIRECT"
+        ],
+        "sloServiceEndpoints": [
+          {
+            "binding": "POST",
+            "url": ""
+          }
+        ],
+        "ssoServiceEndpoints": [
+          {
+            "binding": "POST",
+            "url": "/create",
+            "isDefault": true,
+            "index": 0
+          }
+        ],
+        "signAssertions": false,
+        "spSamlIdentityMapping": "STANDARD",
+        "requireSignedAuthnRequests": false,
+        "assertionLifetime": {
+          "minutesBefore": 5,
+          "minutesAfter": 5
+        },
+        "encryptionPolicy": {
+          "encryptAssertion": false,
+          "encryptSloSubjectNameId": false,
+          "sloSubjectNameIDEncrypted": false,
+          "encryptedAttributes": []
+        },
+        "attributeContract": {
+          "coreAttributes": [
+            {
+              "name": "SAML_SUBJECT",
+              "nameFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+            }
+          ],
+          "extendedAttributes": [
+          ]
+        },
+        "adapterMappings": [],
+        "authenticationPolicyContractAssertionMappings": [
+          {
+            "attributeSources": [
+              {
+                "type": "LDAP",
+                "dataStoreRef": {
+                  "id": "LDAP-9657A9A77DC865D5DCF8F8CBC895C0F1CB4CA450",
+                  "location": "https://pingfed-idev3-01:9999/pf-admin-api/v1/dataStores/LDAP-9657A9A77DC865D5DCF8F8CBC895C0F1CB4CA450"
+                },
+                "description": "DSX",
+                "attributeContractFulfillment": {
+                },
+                "baseDn": "ou=ccoentities,o=cco.cisco.com",
+                "searchScope": "SUBTREE",
+                "searchFilter": "uid=${subject}",
+                "binaryAttributeSettings": {},
+                "memberOfNestedGroup": false
+              }
+            ],
+            "attributeContractFulfillment": {},
+            "issuanceCriteria": {
+              "conditionalCriteria": []
+            },
+            "authenticationPolicyContractRef": {
+              "id": "VemYJR80x2xTgcgg"},
+            "restrictVirtualEntityIds": false,
+            "restrictedVirtualEntityIds": []
+          }
+        ]
+      }
+    }

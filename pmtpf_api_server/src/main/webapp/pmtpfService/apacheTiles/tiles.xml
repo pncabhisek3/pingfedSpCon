@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/pmtpfService/apacheTiles/template/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/pmtpfService/apacheTiles/template/default_header.jsp" />
+		<put-attribute name="menu" value="/pmtpfService/apacheTiles/template/default_menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/pmtpfService/apacheTiles/template/default_footer.jsp" />
+	</definition>
+	
+	<!-- addSpConnection page -->
+	<definition name="connection/connections" extends="base-definition">
+		<put-attribute name="title" value="Connections" />
+		<put-attribute name="body"
+			value="/pmtpfService/jsp/connection/connections.jsp" />
+	</definition>
+
+	<!-- addSpConnection page -->
+	<definition name="connection/addSpConnection" extends="base-definition">
+		<put-attribute name="title" value="Add Conn" />
+		<put-attribute name="body"
+			value="/pmtpfService/jsp/connection/addSpConnection.jsp" />
+	</definition>
+
+	<!-- manageSpConnection page -->
+	<definition name="connection/manageSpConnection" extends="base-definition">
+		<put-attribute name="title" value="Manage Conn" />
+		<put-attribute name="body"
+			value="/pmtpfService/jsp/connection/manageSpConnection.jsp" />
+	</definition>
+	
+	<!-- manageSpConnection page -->
+	<definition name="fileupload/fileupload" extends="base-definition">
+		<put-attribute name="title" value="Manage Conn" />
+		<put-attribute name="body"
+			value="/pmtpfService/jsp/fileupload/fileupload.jsp" />
+	</definition>
+	
+</tiles-definitions>
